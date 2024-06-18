@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio modo oscuro</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style>
+  .modo-claro {
+    background-color: #f8f9fa;
+    color: #212529;
+  }
+  .modo-oscuro {
+    background-color: #343a40;
+    color: #ffffff;
+  }
+</style>
+</head>
+<body class="modo-claro">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Diseño Web</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#" id="modo-claro">Modo Claro</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" id="modo-oscuro">Modo Oscuro</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <h1>Ejercicio de JS</h1>
+  <img src="logouade.png" class="img-fluid" alt="Logo UADE" style="height: 10rem; width: 18rem;">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Primera columna</th>
+        <th scope="col">Segunda columna</th>
+        <th scope="col">Tercera columna</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Dato 1</td>
+        <td>Dato 2</td>
+        <td>Dato 3</td>
+      </tr>     
+    </tbody>
+  </table>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('#modo-claro').click(function() {
+      $('body').removeClass('modo-oscuro').addClass('modo-claro');
+    });
+    $('#modo-oscuro').click(function() {
+      $('body').removeClass('modo-claro').addClass('modo-oscuro');
+    });
+  });
+</script>
+</body>
+</html>
